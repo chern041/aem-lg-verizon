@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="cq:Dialog"
+          title="Product Spotlight"
+          xtype="dialog">
+    <items  jcr:primaryType="cq:TabPanel" xtype="tabpanel">
+        <items jcr:primaryType ="cq:WidgetCollection">
+            <sectionBar jcr:primaryType="cq:Panel"
+                        title="Section Bar"
+                        xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <productName
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Product Name"
+                        name ="./productName"
+                        xtype="textfield"/>
+                    <productDescription
+                        jcr:primaryType ="cq:Widget"
+                        fieldLabel="Product Description"
+                        name="./productDescription"
+                        xtype="richtext"/>
+                    <blackButton
+                        jcr:primaryType ="cq:Widget"
+                        fieldLabel="Black Button"
+                        name="./blackButton"
+                        xtype="textfield"/>
+                    <pathButton
+                        jcr:primaryType ="cq:Widget"
+                        fieldLabel="Button Path/URL"
+                        name="./pathButton"
+                        xtype="pathfield"/>
+                </items>
+            </sectionBar>
+            <backgroundImage
+                jcr:primaryType="cq:Panel"
+                title="Background Image"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <backgroundImagePath
+                        jcr:primaryType ="cq:Widget"
+                        fieldLabel="Background Image Path"
+                        name="./backgroundImagePath"
+                        xtype="pathfield"/>
+                </items>
+            </backgroundImage>
+        </items>
+    </items>
+</jcr:root>
