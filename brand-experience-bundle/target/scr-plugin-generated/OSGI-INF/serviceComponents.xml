@@ -1,18 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
-    <scr:component enabled="true" name="brand-experience ProductSpotlight Component Service">
-        <implementation class="com.verizonwireless.brandexperience.service.impl.ProductSpotlightComponentServiceImpl"/>
+    <scr:component enabled="true" name="brand-experience BannerDescription Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.BannerDescriptionComponentServiceImpl"/>
         <service servicefactory="false">
-            <provide interface="com.verizonwireless.brandexperience.service.ProductSpotlightComponentService"/>
+            <provide interface="com.brandexperience.cq.service.BannerDescriptionComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience BannerDescription Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.BannerDescriptionJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience BannerDescription JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.BannerDescriptionJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.BannerDescriptionJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience BannerDescription JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience PrimaryProduct Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.PrimaryProductComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.PrimaryProductComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience PrimaryProduct Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.PrimaryProductJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience PrimaryProduct JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.PrimaryProductJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.PrimaryProductJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience PrimaryProduct JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience ProductSpotlight Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.ProductSpotlightComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.ProductSpotlightComponentService"/>
         </service>
         <property name="service.pid" value="brand-experience ProductSpotlight Component Service"/>
-        <reference name="jcrService" interface="com.verizonwireless.brandexperience.service.ProductSpotlightJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.ProductSpotlightJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
     </scr:component>
     <scr:component enabled="true" name="brand-experience ProductSpotlight JCR Service">
-        <implementation class="com.verizonwireless.brandexperience.service.impl.ProductSpotlightJcrServiceImpl"/>
+        <implementation class="com.brandexperience.cq.service.impl.ProductSpotlightJcrServiceImpl"/>
         <service servicefactory="false">
-            <provide interface="com.verizonwireless.brandexperience.service.ProductSpotlightJcrService"/>
+            <provide interface="com.brandexperience.cq.service.ProductSpotlightJcrService"/>
         </service>
         <property name="service.pid" value="brand-experience ProductSpotlight JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SecondaryProduct Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.SecondaryProductComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SecondaryProductComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SecondaryProduct Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.SecondaryProductJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SecondaryProduct JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.SecondaryProductJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SecondaryProductJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SecondaryProduct JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SliderTab Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.SliderTabComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SliderTabComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SliderTab Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.SliderTabJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SliderTabItem Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.SliderTabItemComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SliderTabItemComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SliderTabItem Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.SliderTabItemJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SliderTabItem JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.SliderTabItemJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SliderTabItemJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SliderTabItem JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SliderTab JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.SliderTabJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SliderTabJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SliderTab JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SmallProductSet Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.SmallProductSetComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SmallProductSetComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SmallProductSet Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.SmallProductSetJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience SmallProductSet JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.SmallProductSetJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.SmallProductSetJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience SmallProductSet JCR Service"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience TestSpotlight Component Service">
+        <implementation class="com.brandexperience.cq.service.impl.TestSpotlightComponentServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.TestSpotlightComponentService"/>
+        </service>
+        <property name="service.pid" value="brand-experience TestSpotlight Component Service"/>
+        <reference name="jcrService" interface="com.brandexperience.cq.service.TestSpotlightJcrService" cardinality="1..1" policy="static" bind="bindJcrService" unbind="unbindJcrService"/>
+    </scr:component>
+    <scr:component enabled="true" name="brand-experience TestSpotlight JCR Service">
+        <implementation class="com.brandexperience.cq.service.impl.TestSpotlightJcrServiceImpl"/>
+        <service servicefactory="false">
+            <provide interface="com.brandexperience.cq.service.TestSpotlightJcrService"/>
+        </service>
+        <property name="service.pid" value="brand-experience TestSpotlight JCR Service"/>
     </scr:component>
 </components>
