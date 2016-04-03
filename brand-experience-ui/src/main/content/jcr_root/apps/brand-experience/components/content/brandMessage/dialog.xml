@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Brand Message"
+    xtype="dialog">
+    <items  jcr:primaryType="cq:TabPanel" xtype="tabpanel">
+        <items jcr:primaryType ="cq:WidgetCollection">
+            <brandMessage
+                jcr:primaryType="cq:Panel"
+                title="Brand Message"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <textBrandMessage
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text Brand Message"
+                        name ="./textBrandMessage"
+                        xtype="textfield"/>
+                </items>
+            </brandMessage>
+        </items>
+    </items>
+</jcr:root>
